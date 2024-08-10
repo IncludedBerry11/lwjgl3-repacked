@@ -20,11 +20,8 @@ val shade: Configuration by configurations.creating
 
 dependencies {
     val version = "3.3.4"
-    val platforms = listOf("windows", "windows-x86", "linux", "linux-arm64", "macos", "macos-arm64")
-    val dependencies = mutableListOf("-nanovg")
-    if (project.name == "legacy") {
-        dependencies += listOf("-stb", "-tinyfd", "")
-    }
+    val platforms = listOf("windows", "windows-x86", "linux", ,"linux-arm64", "macos", "macos-arm64")
+    val dependencies = listOf("-nanovg", "-stb", "-tinyfd", "")
 
     for (dep in dependencies) {
         val dependency = "org.lwjgl:lwjgl$dep:$version"
