@@ -19,8 +19,8 @@ repositories {
 val shade: Configuration by configurations.creating
 
 dependencies {
-    val version = "3.3.3"
-    val platforms = listOf("windows", "windows-x86", "linux", "macos", "macos-arm64")
+    val version = "3.3.4"
+    val platforms = listOf("windows", "windows-x86", "linux", ,"linux-arm64", "macos", "macos-arm64")
     val dependencies = mutableListOf("-nanovg")
     if (project.name == "legacy") {
         dependencies += listOf("-stb", "-tinyfd", "")
