@@ -38,4 +38,9 @@ jobs:
             ${{ runner.os }}-gradle-v2-
 
       - run: ./gradlew --no-daemon build
-      - run: ls
+      - run: ls build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lwjgl-legacy
+          path: build/*
+          compression-level: 9
